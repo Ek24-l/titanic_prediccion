@@ -37,7 +37,7 @@ SECRET_KEY = 'django-insecure-*ahm7uk&77+^gd$+km1gmz0xp#6cialqm=4bw0o%gvl1(969lj
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['titanic-prediccion-m5mi.onrender.com', 'localhost', '127.0.0.1']# se reemplaza por tu dominio Render
 
 STATIC_URL = '/static/'
