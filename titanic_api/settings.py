@@ -15,6 +15,16 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Carpeta donde se recolectarán los archivos estáticos
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Opcional pero recomendado en producción
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'frontend/static'),  # si tienes archivos CSS/JS en frontend/static
+]
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,9 +36,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*ahm7uk&77+^gd$+km1gmz0xp#6cialqm=4bw0o%gvl1(969lj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+DEBUG = False
+ALLOWED_HOSTS = ['<tu_dominio>.onrender.com']  # se reemplaza por tu dominio Render
+
+DEBUG = False
+ALLOWED_HOSTS = ['<tu_dominio>.onrender.com']  # se reemplaza por tu dominio Render
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
@@ -86,6 +102,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontend/static'),
 ]
+
+
 
 
 WSGI_APPLICATION = 'titanic_api.wsgi.application'
