@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Predicción Titanic</title>
+    {% load static %}
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="{% static 'js/app.js' %}" defer></script>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+    <div class="card shadow-lg p-4">
+        <h1 class="card-title text-center mb-4">Predicción de Supervivencia Titanic</h1>
+
+        <form id="predictForm">
+            <div class="row mb-3">
+                <div class="col">
+                    <label class="form-label">Categoria (pclass)</label>
+                    <input type="number" class="form-control" name="pclass" value="3" min="1" max="3">
+                </div>
+                <div class="col">
+                    <label class="form-label">Años (age)</label>
+                    <input type="number" class="form-control" name="age" value="30" min="0">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label class="form-label">Numero de Hermanos o conyuges (sibsp)</label>
+                    <input type="number" class="form-control" name="sibsp" value="0" min="0">
+                </div>
+                <div class="col">
+                    <label class="form-label">Numero de padres o hijos (parch)</label>
+                    <input type="number" class="form-control" name="parch" value="0" min="0">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label class="form-label">Tarifa</label>
+                    <input type="number" class="form-control" name="fare" value="30" min="0">
+                </div>
+                <div class="col">
+                    <label class="form-label">Sexo (Sex)</label>
+                    <select class="form-select" name="sex">
+                        <option value="male">Masculino</option>
+                        <option value="female">Femenino</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Predecir</button>
+            </div>
+        </form>
+
+        <div class="mt-4">
+            <h3 class="text-center">Resultado:</h3>
+            <pre id="result" class="bg-light p-3 border rounded text-center fs-5"></pre>
+        </div>
+    </div>
+</div>
+</body>
+</html>
