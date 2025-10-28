@@ -40,9 +40,6 @@ SECRET_KEY = 'django-insecure-*ahm7uk&77+^gd$+km1gmz0xp#6cialqm=4bw0o%gvl1(969lj
 DEBUG = False
 ALLOWED_HOSTS = ['https://titanic-prediccion-m5mi.onrender.com']  # se reemplaza por tu dominio Render
 
-DEBUG = False
-ALLOWED_HOSTS = ['<tu_dominio>.onrender.com']  # se reemplaza por tu dominio Render
-
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
